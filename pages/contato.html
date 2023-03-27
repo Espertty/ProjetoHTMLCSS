@@ -23,7 +23,7 @@
 		</header>
 
 		<main>
-			<form>
+			<form onsubmit="event.preventDefault()">
 				<label for="nomesobrenome">Nome e sobrenome</label>
 				<input type="text" id="nomesobrenome" class="input-padrao" required>
 
@@ -47,16 +47,16 @@
 
 				<fieldset>
 					<legend>Qual horário prefere ser atendido?</legend>
-					<select>
+					<select id="selected-shift">
 						<option>Manhã</option>
 						<option>Tarde</option>
 						<option>Noite</option>
 					</select>
 				</fieldset>
 
-				<label class="checkbox"><input type="checkbox" checked>Gostaria de receber nossas novidades por email?</label>
+				<label class="checkbox"><input type="checkbox" id="checkbox" checked>Gostaria de receber nossas novidades por email?</label>
 
-				<input type="submit" value="Enviar formulário" class="enviar">
+				<input onclick="enviaWhats()" type="submit" value="Enviar formulário" class="enviar">
 			</form>
 
 			<table>
@@ -83,5 +83,6 @@
 			<img src="/img/logo.png" alt="Logo da Barbearia Alura">
 			<p class="copyright">&copy; Copyright Barbearia - 2023</p>
 		</footer>
+		<script src="/scripts/funcionalitys.js"></script>
 	</body>
 </html>
